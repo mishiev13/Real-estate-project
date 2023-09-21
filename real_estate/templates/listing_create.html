@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+
+
+{% block content %}
+
+<h1 class="text-4xl text-purple-900">Create a new listing</h1>
+<body class="text-center">   
+    <form method="post" class="mt-7" enctype="multipart/form-data">
+        
+        {% render_field form.title placeholder="  Title" class="mt-5" %}
+        {% render_field form.price placeholder="  Price$" class="mt-5" %}
+        {% render_field form.num_bedrooms placeholder="  Bedroom qty" class="mt-5" %}
+        {% render_field form.num_bathrooms placeholder="  Bathroom qty" class="mt-5" %}
+        {% render_field form.address placeholder="  Address" class="mt-5" %}
+        {% render_field form.image placeholder="  Image" class="mt-5" %}
+        
+
+        <button type="submit" class="mt-7 text-emerald-500 border-solid hover:border-dotted border-2 border-emerald-600 px-1 py-1"> Submit </button>
+    </form>
+</body>
+
+{% endblock content %}
